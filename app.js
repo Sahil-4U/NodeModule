@@ -83,11 +83,12 @@ app.get("/form",(req,res)=>{
     </html>
     `)
 })
-app.post("form_submit",(req,res)=>{
+app.post("/form_submit",(req,res)=>{
     console.log(req.body);
     //but to check the req.body we have to import first express.json() at the top
     //syntax:-app.use(express.json());
     //app.use(express.urlencoded({ extended: true }));
+    //in req.body data is present which is send in post request
     return res.send(`<h3>form submit successfully</h3>`);
 })
  
